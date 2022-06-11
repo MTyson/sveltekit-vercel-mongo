@@ -14,14 +14,14 @@ export async function post ({request}) {
 }
 
 export async function get ({request}) {
-  let cats = [
-                { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
-                { id: 'z_AbfPXTKms', name: 'Maru' },
-                { id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
-        ];
+  const dbConnection = await clientPromise;
+  const db = dbConnection.db();
+  const collection = db.collection("apothegm");
+  let apos = await collection.find({}).toArray();
+
   return { 
     status: 200, 
     headers: { 'content-type': 'application/json' },
-    body: { cats } 
+    body: { apos } 
   };
 }
