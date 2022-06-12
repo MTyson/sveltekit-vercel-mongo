@@ -6,10 +6,10 @@
       method: "GET",
       headers: { 'content-type': 'application/json' }
     });
-    console.log("RES:" + res.status + " TEXT: " + await res.text());
+//    console.log("RES:" + res.status + " TEXT: " + await res.text());
     return {
       props: {
-        apothegms: {apos:[]} /*await res.json()*/
+        apothegms: await res.json()
       }
     };
   }
