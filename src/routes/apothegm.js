@@ -14,6 +14,8 @@ export async function post ({request}) {
 }
 
 export async function get ({request}) {
+  console.warn("BEGIN get");
+  console.warn("ENV: " + JSON.stringify(process.env));
   const dbConnection = await clientPromise;
   const db = dbConnection.db();
   const collection = db.collection("apothegm");
