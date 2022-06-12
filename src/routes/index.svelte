@@ -1,19 +1,19 @@
 <script context="module">
 //export const prerender = true;
-/*
+
   export async function load({ params, fetch, session, stuff }) {
     const res = await fetch('/apothegm', {
       method: "GET",
       headers: { 'content-type': 'application/json' }
     });
-//    console.log("RES:" + res.status);
+    console.log("RES:" + res.status + " TEXT: " + await res.text());
     return {
       props: {
         apothegms: await res.json()
       }
     };
   }
-*/
+
 </script>
 
 <script>
