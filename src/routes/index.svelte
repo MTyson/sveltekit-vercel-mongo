@@ -1,6 +1,6 @@
 <script context="module">
 //export const prerender = true;
-
+/*
   export async function load({ params, fetch, session, stuff }) {
     const res = await fetch('/apothegm', {
       method: "GET",
@@ -13,6 +13,7 @@
       }
     };
   }
+*/
 </script>
 
 <script>
