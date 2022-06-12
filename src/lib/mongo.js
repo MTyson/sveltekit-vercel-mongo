@@ -1,12 +1,21 @@
-import dotenv from 'dotenv';
-dotenv.config();
+//import dotenv from 'dotenv';
+//dotenv.config();
+//require('dotenv').config();
+
+import 'dotenv/config';
+
+console.log("ENV: " + JSON.stringify(process.env));
 
 import { MongoClient } from 'mongodb';
 
 //const uri = process.env['MONGODB_URI']; // SEE: https://dev.to/kvetoslavnovak/connect-to-mongodb-atlas-from-sveltekit-25hg
-const uri = "mongodb+srv://mtyson:sukisue123@cluster0.smfbz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+//const uri = "mongodb+srv://mtyson:sukisue123@cluster0.smfbz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-console.log("MONGO: " + uri);
+//console.log("VITE: " + import.meta.env.VITE_MESSAGE);
+//
+
+const uri = process.env["MONGODB_URI"];
+console.log("!!MONGODB_URI: " + uri);
 
 const options = {
     useUnifiedTopology: true,
