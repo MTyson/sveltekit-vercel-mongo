@@ -3,7 +3,7 @@ import clientPromise from '../lib/mongo';
 export async function post ({request}) {
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!");
   const dbConnection = await clientPromise;
-  const db = dbConnection.db();
+  const db = dbConnection.db("apothegm");
   const collection = db.collection('apothegm');
     //let apo = JSON.parse(request.body);
     //let apo = await request.formData(); 
@@ -17,7 +17,7 @@ export async function get ({request}) {
   console.warn("BEGIN get");
   console.warn("ENV: " + JSON.stringify(process.env));
   const dbConnection = await clientPromise;
-  const db = dbConnection.db();
+  const db = dbConnection.db("apothegm");
   const collection = db.collection("apothegm");
   let apos = await collection.find({}).toArray();
 
