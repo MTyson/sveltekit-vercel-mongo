@@ -9,7 +9,7 @@
     console.log("RES:" + res.status + " TEXT: " + await res.text());
     return {
       props: {
-        apothegms: await res.json()
+        apothegms: {apos:[]} /*await res.json()*/
       }
     };
   }
