@@ -64,7 +64,7 @@ async function getApothegms() {
         <img src="svelte-welcome.png" alt="Welcome" />
       </picture>
     </div>
-    to your new<br />SvelteKit app
+    to your new<br />SvelteKit app FOOBAR
   </h1>
   <form on:submit|preventDefault={onSubmit}>
     <label for="apothegm">Apothegm</label>
