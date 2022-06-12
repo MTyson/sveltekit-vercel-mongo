@@ -14,8 +14,9 @@ import { MongoClient } from 'mongodb';
 //console.log("VITE: " + import.meta.env.VITE_MESSAGE);
 //
 
+process.env.MONGODB_URI
 const uri = process.env["MONGODB_URI"];
-console.error("!!!!!!!!!!!!!!!MONGODB_URI: " + uri);
+console.warn("!!!!!!!!!!!!!!!MONGODB_URI: " + uri);
 
 const options = {
     useUnifiedTopology: true,
